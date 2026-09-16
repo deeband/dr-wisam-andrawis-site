@@ -1,0 +1,797 @@
+<title>ד״ר ויסאם אנדראוס</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@400;500;600;700;800&display=swap">
+<style>
+  :root{
+    --bg:#F5F7F1;
+    --surface:#FFFFFF;
+    --surface-2:#ECF1E6;
+    --ink:#16241C;
+    --ink-soft:#45564A;
+    --ink-mute:#71816F;
+    --line:#DCE4D6;
+    --accent:#C15631;
+    --accent-contrast:#FFFFFF;
+    --accent-soft:#F3E1D6;
+    --accent-2:#2E6F61;
+    --accent-2-soft:#E1EEE8;
+    --footer-bg:#15241C;
+    --footer-ink:#F2F6EE;
+    --footer-line:rgba(255,255,255,.14);
+    --shadow:0 18px 44px -22px rgba(21,36,25,.35);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0D1712;
+      --surface:#142019;
+      --surface-2:#172922;
+      --ink:#EAF2EA;
+      --ink-soft:#B6C7BC;
+      --ink-mute:#89A090;
+      --line:#25352B;
+      --accent:#E8825A;
+      --accent-contrast:#1B120C;
+      --accent-soft:#2C2019;
+      --accent-2:#57B39D;
+      --accent-2-soft:#152E28;
+      --footer-bg:#080D0A;
+      --footer-ink:#E7F0E5;
+      --footer-line:rgba(255,255,255,.09);
+      --shadow:0 18px 44px -20px rgba(0,0,0,.55);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0D1712;
+    --surface:#142019;
+    --surface-2:#172922;
+    --ink:#EAF2EA;
+    --ink-soft:#B6C7BC;
+    --ink-mute:#89A090;
+    --line:#25352B;
+    --accent:#E8825A;
+    --accent-contrast:#1B120C;
+    --accent-soft:#2C2019;
+    --accent-2:#57B39D;
+    --accent-2-soft:#152E28;
+    --footer-bg:#080D0A;
+    --footer-ink:#E7F0E5;
+    --footer-line:rgba(255,255,255,.09);
+    --shadow:0 18px 44px -20px rgba(0,0,0,.55);
+    color-scheme: dark;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    direction:rtl;
+    text-align:right;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Assistant','Segoe UI',Tahoma,Arial,sans-serif;
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
+  }
+  html{scroll-behavior:smooth;}
+
+  h1,h2,h3{font-family:'Frank Ruhl Libre',ui-serif,Georgia,serif; margin:0; text-wrap:balance; color:var(--ink); font-weight:700;}
+  p{margin:0;}
+  a{color:inherit;}
+  img,svg{max-width:100%;display:block;}
+
+  .container{max-width:1120px; margin-inline:auto; padding-inline:clamp(20px,4vw,48px);}
+  section{position:relative;}
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:.5em;
+    font-size:.8rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent-2); margin-bottom:.9em;
+  }
+  .eyebrow::before{content:""; width:1.4em; height:2px; background:var(--accent); border-radius:2px;}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:.55em;
+    padding:.85em 1.6em; border-radius:999px; font-weight:700; font-size:1rem;
+    text-decoration:none; border:1.5px solid transparent; cursor:pointer;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--accent); color:var(--accent-contrast); box-shadow:var(--shadow);}
+  .btn-primary:hover{transform:translateY(-3px); box-shadow:0 20px 34px -16px rgba(193,86,49,.55);}
+  .btn-ghost{background:transparent; color:var(--ink); border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--accent-2); color:var(--accent-2); transform:translateY(-3px);}
+  .btn:focus-visible{outline:3px solid var(--accent-2); outline-offset:3px;}
+
+  /* ---------- header ---------- */
+  .site-header{
+    position:sticky; top:env(safe-area-inset-top,0px); z-index:50;
+    padding-block:14px;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(14px) saturate(1.2);
+    -webkit-backdrop-filter:blur(14px) saturate(1.2);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease, box-shadow .3s ease, background .3s ease;
+  }
+  .site-header.scrolled{border-color:var(--line); box-shadow:0 12px 28px -20px rgba(0,0,0,.25);}
+  .site-header .container{display:flex; align-items:center; justify-content:space-between; gap:16px;}
+  .brand{display:flex; align-items:center; gap:.65em; text-decoration:none;}
+  .brand-name{font-family:'Frank Ruhl Libre',serif; font-weight:700; font-size:1.08rem; color:var(--ink); line-height:1.25;}
+  .brand-name small{display:block; font-family:'Assistant',sans-serif; font-weight:600; font-size:.68rem; color:var(--ink-mute); letter-spacing:.03em;}
+  .emblem{width:42px; height:42px; flex:none;}
+
+  .main-nav{display:flex; align-items:center; gap:26px; list-style:none; margin:0; padding:0;}
+  .main-nav a{text-decoration:none; font-weight:600; font-size:.95rem; color:var(--ink-soft); position:relative; padding-block:4px;}
+  .main-nav a::after{content:""; position:absolute; inset-inline:0; bottom:-2px; height:2px; background:var(--accent); transform:scaleX(0); transform-origin:right; transition:transform .3s ease;}
+  .main-nav a:hover{color:var(--ink);}
+  .main-nav a:hover::after{transform:scaleX(1);}
+  @media (max-width:780px){ .main-nav{display:none;} }
+
+  /* ---------- hero ---------- */
+  .hero{padding-block:56px 88px; overflow:clip;}
+  .hero-canvas-wrap{position:absolute; inset:0; z-index:0; overflow:hidden;}
+  .hero-canvas-wrap canvas{width:100%; height:100%; display:block; opacity:.55;}
+  .hero-glow{position:absolute; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(560px 360px at 82% 6%, color-mix(in srgb, var(--accent-2) 22%, transparent), transparent 70%),
+      radial-gradient(480px 320px at 8% 30%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%);
+  }
+  .hero .container{position:relative; z-index:1;}
+  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center;}
+  @media (max-width:920px){ .hero-grid{grid-template-columns:1fr; gap:40px;} }
+
+  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem); line-height:1.06; letter-spacing:-.01em;}
+  .hero-role{font-size:clamp(1.05rem,2vw,1.3rem); color:var(--accent-2); font-weight:700; margin-top:.5em; font-family:'Frank Ruhl Libre',serif;}
+  .hero-lead{margin-top:1.1em; max-width:56ch; color:var(--ink-soft); font-size:1.12rem;}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:14px; margin-top:2em;}
+
+  .stat-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; margin-top:3em; background:var(--line); border:1px solid var(--line); border-radius:18px; overflow:hidden;}
+  .stat{background:var(--surface); padding:1.4em 1.3em;}
+  .stat .num{font-family:'Frank Ruhl Libre',serif; font-size:1.9rem; font-weight:700; color:var(--ink); display:flex; align-items:baseline; gap:.2em;}
+  .stat .num .star{color:var(--accent); font-size:1.05rem;}
+  .stat .label{margin-top:.35em; font-size:.82rem; color:var(--ink-mute); font-weight:600;}
+
+  .hero-portrait{position:relative; display:flex; align-items:center; justify-content:center;}
+  .medallion{position:relative; width:min(360px,80vw); aspect-ratio:1;}
+  .medallion svg{width:100%; height:100%;}
+  .medallion-caption{position:absolute; bottom:-6px; inset-inline-start:50%; transform:translateX(50%); background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:.55em 1.2em; box-shadow:var(--shadow); font-size:.85rem; font-weight:700; white-space:nowrap;}
+  [dir],body{--x:1;}
+  .medallion-caption{transform:translate(50%,0);}
+
+  /* ---------- generic section chrome ---------- */
+  .section-pad{padding-block:88px;}
+  .surface-alt{background:var(--surface-2);}
+  .head-row{max-width:62ch; margin-bottom:3em;}
+  .head-row h2{font-size:clamp(1.8rem,3.2vw,2.5rem);}
+  .head-row p{margin-top:.7em; color:var(--ink-soft); font-size:1.05rem; max-width:58ch;}
+
+  /* reveal system */
+  .reveal{transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);}
+  .reveal.pre{opacity:0; transform:translateY(22px);}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid; grid-template-columns:1.3fr .9fr; gap:56px;}
+  @media (max-width:860px){ .about-grid{grid-template-columns:1fr;} }
+  .about-grid p + p{margin-top:1.1em;}
+  .about-grid p{color:var(--ink-soft); font-size:1.05rem;}
+  .badge-list{list-style:none; margin:1.6em 0 0; padding:0; display:flex; flex-direction:column; gap:.7em;}
+  .badge-list li{display:flex; align-items:flex-start; gap:.7em; font-size:.92rem; color:var(--ink-soft); font-weight:600; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:.8em 1em;}
+  .badge-list svg{flex:none; width:1.2em; height:1.2em; color:var(--accent-2); margin-top:.1em;}
+  .about-side{background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:2em; align-self:start;}
+  .about-side h3{font-size:1.1rem;}
+  .fact{display:flex; justify-content:space-between; gap:1em; padding-block:.9em; border-bottom:1px solid var(--line); font-size:.92rem;}
+  .fact:last-child{border-bottom:none;}
+  .fact dt{color:var(--ink-mute); font-weight:600;}
+  .fact dd{margin:0; font-weight:700; text-align:left;}
+
+  /* ---------- timeline ---------- */
+  .timeline{position:relative; margin-top:1em;}
+  .timeline::before{content:""; position:absolute; inset-inline-start:19px; top:6px; bottom:6px; width:2px; background:linear-gradient(to bottom, var(--accent-2), var(--line));}
+  .t-item{position:relative; padding-inline-start:58px; padding-block:0 2.6em;}
+  .t-item:last-child{padding-bottom:0;}
+  .t-dot{position:absolute; inset-inline-start:8px; top:2px; width:24px; height:24px; border-radius:50%; background:var(--surface); border:2px solid var(--accent-2); display:flex; align-items:center; justify-content:center;}
+  .t-dot::after{content:""; width:8px; height:8px; border-radius:50%; background:var(--accent-2);}
+  .t-item.now .t-dot{border-color:var(--accent); background:var(--accent-soft);}
+  .t-item.now .t-dot::after{background:var(--accent);}
+  .t-year{font-weight:700; color:var(--accent-2); font-size:.9rem; letter-spacing:.02em;}
+  .t-item.now .t-year{color:var(--accent);}
+  .t-title{font-family:'Frank Ruhl Libre',serif; font-size:1.28rem; font-weight:700; margin-top:.25em;}
+  .t-desc{color:var(--ink-soft); margin-top:.4em; max-width:60ch; font-size:.98rem;}
+
+  /* ---------- services ---------- */
+  .service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media (max-width:920px){ .service-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:620px){ .service-grid{grid-template-columns:1fr;} }
+  .service-card{background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:1.8em; transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;}
+  .service-card:hover{transform:translateY(-6px); box-shadow:var(--shadow); border-color:var(--accent-2);}
+  .service-icon{width:44px; height:44px; border-radius:12px; background:var(--accent-2-soft); display:flex; align-items:center; justify-content:center; color:var(--accent-2); margin-bottom:1.1em;}
+  .service-icon svg{width:24px; height:24px;}
+  .service-card h3{font-size:1.12rem;}
+  .service-card p{margin-top:.5em; color:var(--ink-soft); font-size:.92rem;}
+
+  /* ---------- clinics ---------- */
+  .clinic-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  @media (max-width:760px){ .clinic-grid{grid-template-columns:1fr;} }
+  .clinic-card{background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:2em; display:flex; flex-direction:column; gap:1.3em;}
+  .clinic-top{display:flex; align-items:flex-start; justify-content:space-between; gap:1em;}
+  .clinic-top h3{font-size:1.3rem;}
+  .clinic-tag{font-size:.72rem; font-weight:700; letter-spacing:.04em; padding:.35em .8em; border-radius:999px; background:var(--accent-2-soft); color:var(--accent-2); white-space:nowrap;}
+  .clinic-tag.alt{background:var(--accent-soft); color:var(--accent);}
+  .clinic-row{display:flex; align-items:flex-start; gap:.8em; font-size:.95rem; color:var(--ink-soft);}
+  .clinic-row svg{flex:none; width:1.25em; height:1.25em; color:var(--accent-2); margin-top:.15em;}
+  .clinic-row strong{color:var(--ink); display:block; font-size:.78rem; font-weight:700; letter-spacing:.02em; margin-bottom:.15em;}
+  .clinic-card .btn{align-self:flex-start; margin-top:.2em;}
+
+  /* ---------- reviews ---------- */
+  .review-wrap{background:linear-gradient(135deg, var(--accent-2-soft), var(--surface)); border:1px solid var(--line); border-radius:24px; padding:clamp(2em,5vw,3.4em); display:grid; grid-template-columns:auto 1fr; gap:2.2em; align-items:start;}
+  @media (max-width:700px){ .review-wrap{grid-template-columns:1fr;} }
+  .quote-mark{font-family:'Frank Ruhl Libre',serif; font-size:4.5rem; line-height:1; color:var(--accent); font-weight:900;}
+  blockquote{margin:0; font-family:'Frank Ruhl Libre',serif; font-size:clamp(1.3rem,2.4vw,1.7rem); line-height:1.5; color:var(--ink);}
+  .review-meta{margin-top:1.3em; display:flex; flex-wrap:wrap; gap:.9em; align-items:center;}
+  .rating-pill{display:flex; align-items:center; gap:.5em; background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:.55em 1.1em; font-size:.88rem; font-weight:700;}
+  .rating-pill .star{color:var(--accent);}
+  .review-source{color:var(--ink-mute); font-size:.85rem; text-decoration:underline; text-underline-offset:3px;}
+
+  /* ---------- contact / footer ---------- */
+  .contact-band{background:var(--footer-bg); color:var(--footer-ink); padding-block:80px 40px;}
+  .contact-head{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:2em; padding-bottom:3em; border-bottom:1px solid var(--footer-line);}
+  .contact-head h2{color:var(--footer-ink); font-size:clamp(1.9rem,3.6vw,2.7rem); max-width:16ch;}
+  .contact-head p{color:color-mix(in srgb, var(--footer-ink) 72%, transparent); margin-top:.6em; max-width:42ch;}
+  .contact-actions{display:flex; flex-wrap:wrap; gap:14px;}
+  .contact-band .btn-ghost{border-color:var(--footer-line); color:var(--footer-ink);}
+  .contact-band .btn-ghost:hover{border-color:var(--accent); color:var(--accent);}
+
+  .contact-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:2em; padding-block:3em;}
+  @media (max-width:820px){ .contact-grid{grid-template-columns:1fr; padding-block:2.4em;} }
+  .contact-col h4{font-size:.78rem; font-weight:700; letter-spacing:.05em; color:color-mix(in srgb, var(--footer-ink) 55%, transparent); margin-bottom:1em;}
+  .contact-col a, .contact-col span{display:block; color:var(--footer-ink); text-decoration:none; font-size:.95rem; margin-bottom:.55em;}
+  .contact-col a:hover{color:var(--accent);}
+  .foot-bottom{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1em; padding-top:2em; border-top:1px solid var(--footer-line); font-size:.8rem; color:color-mix(in srgb, var(--footer-ink) 55%, transparent);}
+  .foot-brand{display:flex; align-items:center; gap:.6em; color:var(--footer-ink); font-weight:700; font-family:'Frank Ruhl Libre',serif;}
+  .foot-brand .emblem{width:28px; height:28px;}
+
+  /* ---------- extra motion: scroll progress ---------- */
+  .scroll-progress{position:fixed; top:env(safe-area-inset-top,0px); inset-inline:0; height:3px; z-index:60; pointer-events:none;}
+  .scroll-progress-bar{height:100%; width:0%; background:linear-gradient(to left, var(--accent), var(--accent-2));}
+
+  /* ---------- hero load-in choreography ---------- */
+  @keyframes riseIn{from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);}}
+  .load-in{animation:riseIn .8s cubic-bezier(.2,.7,.2,1) both;}
+  .load-in.d1{animation-delay:.05s;} .load-in.d2{animation-delay:.16s;}
+  .load-in.d3{animation-delay:.27s;} .load-in.d4{animation-delay:.38s;}
+  .load-in.d5{animation-delay:.49s;} .load-in.d6{animation-delay:.6s;}
+
+  /* ---------- staggered reveal for repeated groups ---------- */
+  .service-grid .service-card:nth-child(1){transition-delay:.02s;} .service-grid .service-card:nth-child(2){transition-delay:.09s;}
+  .service-grid .service-card:nth-child(3){transition-delay:.16s;} .service-grid .service-card:nth-child(4){transition-delay:.23s;}
+  .service-grid .service-card:nth-child(5){transition-delay:.3s;} .service-grid .service-card:nth-child(6){transition-delay:.37s;}
+  .stat-grid .stat:nth-child(1){transition-delay:0s;} .stat-grid .stat:nth-child(2){transition-delay:.09s;}
+  .stat-grid .stat:nth-child(3){transition-delay:.18s;} .stat-grid .stat:nth-child(4){transition-delay:.27s;}
+  .timeline .t-item:nth-child(1){transition-delay:0s;} .timeline .t-item:nth-child(2){transition-delay:.14s;}
+  .timeline .t-item:nth-child(3){transition-delay:.28s;} .timeline .t-item:nth-child(4){transition-delay:.42s;}
+  .clinic-grid .clinic-card:nth-child(1){transition-delay:0s;} .clinic-grid .clinic-card:nth-child(2){transition-delay:.14s;}
+  .badge-list li:nth-child(1){transition-delay:0s;} .badge-list li:nth-child(2){transition-delay:.09s;} .badge-list li:nth-child(3){transition-delay:.18s;}
+  .insurance-row .ins-badge:nth-child(1){transition-delay:0s;} .insurance-row .ins-badge:nth-child(2){transition-delay:.09s;} .insurance-row .ins-badge:nth-child(3){transition-delay:.18s;}
+
+  /* ---------- richer hover motion ---------- */
+  .stat{position:relative; overflow:hidden; transition:transform .35s ease;}
+  .stat::before{content:""; position:absolute; inset-inline:0; top:0; height:2px; background:var(--accent); transform:scaleX(0); transform-origin:right; transition:transform .4s ease;}
+  .stat:hover{transform:translateY(-4px);}
+  .stat:hover::before{transform:scaleX(1);}
+  .service-card:hover{transform:translateY(-6px) scale(1.015);}
+  .service-card:hover .service-icon{transform:rotate(-8deg) scale(1.08);}
+  .service-icon{transition:transform .4s cubic-bezier(.2,.7,.2,1);}
+  .brand .emblem{transition:transform .45s cubic-bezier(.2,.7,.2,1);}
+  .brand:hover .emblem{transform:rotate(10deg) scale(1.05);}
+  .btn-primary{position:relative; overflow:hidden;}
+  .btn-primary::after{content:""; position:absolute; inset:0; background:linear-gradient(120deg, transparent 35%, rgba(255,255,255,.4) 50%, transparent 65%); transform:translateX(-130%);}
+  .btn-primary:hover::after{transform:translateX(130%); transition:transform .7s ease;}
+
+  /* ---------- medallion photo ---------- */
+  .medallion{transition:transform .35s ease; transform-style:preserve-3d;}
+  .medallion-ring{position:absolute; inset:0; animation:medspin 50s linear infinite;}
+  @keyframes medspin{to{transform:rotate(360deg);}}
+  .medallion-accent{position:absolute; inset:0; animation:floaty 6.5s ease-in-out infinite;}
+  @keyframes floaty{0%,100%{transform:translateY(0);} 50%{transform:translateY(-6px);}}
+  .medallion-photo-wrap{position:absolute; inset:11%; border-radius:50%; overflow:hidden; box-shadow:0 0 0 6px var(--surface), var(--shadow);}
+  .medallion-photo-wrap img{width:100%; height:100%; object-fit:cover; object-position:top center; display:block;}
+
+  /* ---------- insurance trust bar ---------- */
+  .insurance-band{padding-block:32px; border-block:1px solid var(--line); background:var(--surface);}
+  .insurance-band .container{display:flex; flex-wrap:wrap; align-items:center; gap:1.2em 2em; justify-content:space-between;}
+  .insurance-label{font-size:.8rem; font-weight:700; color:var(--ink-mute); letter-spacing:.02em; white-space:nowrap;}
+  .insurance-row{display:flex; flex-wrap:wrap; gap:12px;}
+  .ins-badge{display:flex; align-items:center; gap:.55em; padding:.6em 1.1em; border:1px solid var(--line); border-radius:12px; background:var(--surface-2); font-weight:700; font-size:.9rem; color:var(--ink-soft); transition:transform .3s ease, border-color .3s ease, color .3s ease, box-shadow .3s ease;}
+  .ins-badge svg{width:1.25em; height:1.25em; color:var(--accent-2); flex:none;}
+  .ins-badge:hover{transform:translateY(-3px); border-color:var(--accent-2); color:var(--ink); box-shadow:var(--shadow);}
+</style>
+
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollBar"></div></div>
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a class="brand" href="#top">
+      <svg class="emblem" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+        <polygon points="22,2 40,12 40,32 22,42 4,32 4,12" fill="var(--surface)" stroke="var(--accent-2)" stroke-width="1.6"/>
+        <path d="M22 15 V29 M22 15 L15 22 M22 15 L29 22" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="22" cy="15" r="2" fill="var(--accent)"/>
+        <circle cx="15" cy="22" r="1.7" fill="var(--accent)"/>
+        <circle cx="29" cy="22" r="1.7" fill="var(--accent)"/>
+      </svg>
+      <span class="brand-name">ד״ר ויסאם אנדראוס<small>אלרגיה ואימונולוגיה קלינית</small></span>
+    </a>
+    <ul class="main-nav">
+      <li><a href="#about">אודות</a></li>
+      <li><a href="#training">הכשרה</a></li>
+      <li><a href="#services">תחומי טיפול</a></li>
+      <li><a href="#clinics">מרפאות</a></li>
+      <li><a href="#reviews">ביקורות</a></li>
+    </ul>
+    <a class="btn btn-primary" href="tel:0046198030">קביעת תור</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-canvas-wrap"><canvas id="antibodyField" aria-hidden="true"></canvas></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow load-in d1">מומחה לאלרגיה ואימונולוגיה קלינית</p>
+          <h1 class="load-in d2">ד״ר ויסאם<br>אנדראוס</h1>
+          <p class="hero-role load-in d3">רופא בכיר, המכון לאלרגיה ואימונולוגיה קלינית · בית החולים רמב״ם</p>
+          <p class="hero-lead load-in d4">אבחון וטיפול באלרגיות, אסתמה, אורטיקריה כרונית ומחלות מערכת החיסון — בשילוב של דיוק קליני מבית חולים אוניברסיטאי לצד ליווי אישי וסבלני לאורך כל הדרך.</p>
+          <div class="hero-actions load-in d5">
+            <a class="btn btn-primary" href="tel:0046198030">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              קביעת תור
+            </a>
+            <a class="btn btn-ghost" href="#services">תחומי הטיפול</a>
+          </div>
+
+          <div class="stat-grid load-in d6">
+            <div class="stat reveal">
+              <div class="num">5.0 <span class="star">★</span></div>
+              <div class="label">דירוג ClearMD · 25 ביקורות</div>
+            </div>
+            <div class="stat reveal">
+              <div class="num">4.9 <span class="star">★</span></div>
+              <div class="label">דירוג MedReviews · 79 ביקורות</div>
+            </div>
+            <div class="stat reveal">
+              <div class="num">+10</div>
+              <div class="label">שנות ניסיון קליני</div>
+            </div>
+            <div class="stat reveal">
+              <div class="num">3</div>
+              <div class="label">שפות טיפול — עברית · אנגלית · ערבית</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-portrait">
+          <div class="medallion" id="medallion">
+            <svg class="medallion-ring" viewBox="0 0 300 300" aria-hidden="true">
+              <defs>
+                <radialGradient id="medGrad" cx="35%" cy="30%" r="75%">
+                  <stop offset="0%" stop-color="var(--accent-2-soft)"/>
+                  <stop offset="100%" stop-color="var(--surface-2)"/>
+                </radialGradient>
+              </defs>
+              <circle cx="150" cy="150" r="146" fill="url(#medGrad)" stroke="var(--line)" stroke-width="2"/>
+              <circle cx="150" cy="150" r="128" fill="none" stroke="var(--accent-2)" stroke-width="1.4" stroke-dasharray="2 9" opacity=".6"/>
+            </svg>
+            <svg class="medallion-accent" viewBox="0 0 300 300" aria-hidden="true">
+              <g stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round" opacity=".85">
+                <path d="M150 14 V38 M150 14 L138 26 M150 14 L162 26"/>
+                <circle cx="150" cy="14" r="3.4" fill="var(--accent-2)" stroke="none"/>
+              </g>
+              <g stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" opacity=".75">
+                <path d="M266 176 V200 M266 176 L254 188 M266 176 L278 188"/>
+                <circle cx="266" cy="176" r="3" fill="var(--accent)" stroke="none"/>
+              </g>
+              <g stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" opacity=".7">
+                <path d="M40 200 V222 M40 200 L29 211 M40 200 L51 211"/>
+                <circle cx="40" cy="200" r="2.6" fill="var(--accent-2)" stroke="none"/>
+              </g>
+            </svg>
+            <div class="medallion-photo-wrap">
+              <img src="doctor-andrawis.jpg" alt="ד״ר ויסאם אנדראוס">
+            </div>
+            <div class="medallion-caption">MD · Technion, 2014</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="insurance-band">
+    <div class="container">
+      <span class="insurance-label reveal pre">מתקבלים במסגרת</span>
+      <div class="insurance-row">
+        <span class="ins-badge reveal pre">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-5Z"/></svg>
+          מאוחדת שירותי בריאות
+        </span>
+        <span class="ins-badge reveal pre">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg>
+          ביטוחים משלימים
+        </span>
+        <span class="ins-badge reveal pre">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
+          מטופלים פרטיים
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <p class="eyebrow reveal pre">אודות</p>
+          <h2 class="reveal pre">רפואה מדויקת, עם אוזן קשבת</h2>
+          <div style="margin-top:1.6em;">
+            <p class="reveal pre">ד״ר ויסאם אנדראוס הוא רופא בכיר במכון לאלרגיה ואימונולוגיה קלינית בבית החולים רמב״ם בחיפה. הוא סיים את לימודי הרפואה בטכניון בשנת 2014, לאחר לימודי מדעי יסוד רפואיים באוניברסיטה העברית בירושלים, והתמחה ברפואה פנימית ברמב״ם בשנים 2015–2019, ולאחר מכן בהתמחות־העל באלרגיה ואימונולוגיה קלינית באותו בית חולים בשנים 2020–2022.</p>
+            <p class="reveal pre">לצד עבודתו בבית החולים, ד״ר אנדראוס מקבל מטופלים במרפאה הפרטית של רום מדיקל ברמת ישי, ובמסגרת שירותי מאוחדת בחיפה. הגישה שלו משלבת בירור יסודי, הסברים ברורים ומעקב צמוד — כדי שכל מטופל יבין מה קורה בגופו וכיצד מתקדמים הלאה.</p>
+          </div>
+          <ul class="badge-list reveal pre">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5"/></svg>
+              האיגוד הישראלי לאלרגיה ואימונולוגיה קלינית
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg>
+              EAACI — האקדמיה האירופית לאלרגיה ואימונולוגיה קלינית
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
+              ההסתדרות הרפואית בישראל
+            </li>
+          </ul>
+        </div>
+
+        <aside class="about-side reveal pre">
+          <h3>בקצרה</h3>
+          <dl style="margin:1em 0 0;">
+            <div class="fact"><dt>תואר רפואה</dt><dd>הטכניון, 2014</dd></div>
+            <div class="fact"><dt>מדעי יסוד</dt><dd>האונ׳ העברית, י-ם</dd></div>
+            <div class="fact"><dt>פנימית</dt><dd>רמב״ם, 2015–2019</dd></div>
+            <div class="fact"><dt>על־התמחות</dt><dd>אלרגיה ואימונולוגיה, 2020–2022</dd></div>
+            <div class="fact"><dt>שפות</dt><dd>עברית · אנגלית · ערבית</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad surface-alt" id="training">
+    <div class="container">
+      <div class="head-row">
+        <p class="eyebrow reveal pre">הכשרה ותפקידים</p>
+        <h2 class="reveal pre">מסלול מקצועי</h2>
+        <p class="reveal pre">שמונה עשרה שנה של לימוד קליני רציף — מהתואר ברפואה ועד תפקיד בכיר במכון האלרגיה של רמב״ם.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="t-item reveal pre">
+          <div class="t-dot"></div>
+          <div class="t-year">2010–2014</div>
+          <h3 class="t-title">לימודי רפואה, הטכניון</h3>
+          <p class="t-desc">תואר ברפואה בטכניון, חיפה, לאחר לימודי מדעי יסוד רפואיים באוניברסיטה העברית בירושלים.</p>
+        </div>
+        <div class="t-item reveal pre">
+          <div class="t-dot"></div>
+          <div class="t-year">2015–2019</div>
+          <h3 class="t-title">התמחות ברפואה פנימית</h3>
+          <p class="t-desc">התמחות מלאה במחלקה הפנימית בבית החולים רמב״ם, חיפה.</p>
+        </div>
+        <div class="t-item reveal pre">
+          <div class="t-dot"></div>
+          <div class="t-year">2020–2022</div>
+          <h3 class="t-title">על־התמחות באלרגיה ואימונולוגיה קלינית</h3>
+          <p class="t-desc">הכשרת־על במכון לאלרגיה ואימונולוגיה קלינית, רמב״ם.</p>
+        </div>
+        <div class="t-item now reveal pre">
+          <div class="t-dot"></div>
+          <div class="t-year">היום</div>
+          <h3 class="t-title">רופא בכיר, רמב״ם · מרפאה פרטית ברום מדיקל</h3>
+          <p class="t-desc">ממשיך לטפל ולהוביל מחקר קליני במכון האלרגיה של רמב״ם, לצד קבלת מטופלים במרפאת רום מדיקל ברמת ישי ובמסגרת מאוחדת בחיפה.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad" id="services">
+    <div class="container">
+      <div class="head-row">
+        <p class="eyebrow reveal pre">תחומי טיפול</p>
+        <h2 class="reveal pre">מה מטפלים אצל ד״ר אנדראוס</h2>
+        <p class="reveal pre">בירור ואבחון מדויק של תגובות מערכת החיסון — מאלרגיה עונתית ועד מחלות עור ודרכי נשימה כרוניות.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal pre">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c-1.5-3 .5-5.5 2-7 2-2 2-4 1-6"/><path d="M12 20c1.5-2 3-3 5-3s3.5 1.5 3 4-3 3-5 2-3.5-1.5-3-3Z"/><path d="M9 9c1.5 0 3 .5 3 2"/></svg></div>
+          <h3>נזלת אלרגית ואסתמה</h3>
+          <p>אבחון וטיפול בתסמיני דרכי הנשימה העליונות והתחתונות, כולל סינוסיטיס כרונית ופוליפים באף.</p>
+        </article>
+        <article class="service-card reveal pre">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1.5 2 5 4 5 8a5 5 0 0 1-10 0c0-4 3.5-6 5-8Z"/><path d="M9 21h6"/></svg></div>
+          <h3>אלרגיה למזון וחלב</h3>
+          <p>בירור, אבחון ובניית תוכנית טיפול אישית להימנעות בטוחה ולניהול תגובות אלרגיות למזון.</p>
+        </article>
+        <article class="service-card reveal pre">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12h.01M12 9.5h.01M15 12h.01M12 15h.01"/></svg></div>
+          <h3>אורטיקריה כרונית (חרלת)</h3>
+          <p>איתור גורמים, טיפול תרופתי מדורג ומעקב צמוד להקלה יציבה וארוכת טווח.</p>
+        </article>
+        <article class="service-card reveal pre">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5 1.5 1.5 4 0 5.5s-4 1.5-5.5 0L4 10V4h6l9.5 9.5Z"/><path d="M14.5 4.5 19 9"/></svg></div>
+          <h3>אלרגיה לתרופות</h3>
+          <p>בירור תגובות חשודות לתרופות, בדיקות מכוונות ובניית פרוטוקול בטוח להמשך טיפול.</p>
+        </article>
+        <article class="service-card reveal pre">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13c0-4.5 3.5-9 8-9s8 4.5 8 9-3.5 7-8 7-8-2.5-8-7Z"/><path d="M9 12h6M9 15h4"/></svg></div>
+          <h3>דרמטיטיס אטופית</h3>
+          <p>טיפול משולב בתסמיני עור אלרגיים כרוניים, לצד איתור טריגרים סביבתיים.</p>
+        </article>
+        <article class="service-card reveal pre">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v4M15 3v4"/><rect x="5" y="7" width="14" height="14" rx="3"/><path d="M9 13h6M9 17h4"/></svg></div>
+          <h3>בדיקות עור לאלרגנים</h3>
+          <p>בדיקות עור ייעודיות (Prick Test) לזיהוי מדויק של הגורם האלרגי ובניית תוכנית טיפול בהתאם.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad surface-alt" id="clinics">
+    <div class="container">
+      <div class="head-row">
+        <p class="eyebrow reveal pre">מרפאות וזמינות</p>
+        <h2 class="reveal pre">היכן ומתי ניתן להיפגש</h2>
+        <p class="reveal pre">קבלת מטופלים פרטיים ומטופלי מאוחדת, בשני מוקדים באזור חיפה והצפון.</p>
+      </div>
+
+      <div class="clinic-grid">
+        <div class="clinic-card reveal pre">
+          <div class="clinic-top">
+            <h3>רום מדיקל — רמת ישי</h3>
+            <span class="clinic-tag">פרטי וביטוחים משלימים</span>
+          </div>
+          <div class="clinic-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><strong>כתובת</strong>חורש האלונים 18, רמת ישי</span>
+          </div>
+          <div class="clinic-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <span><strong>שעות קבלה</strong>א׳–ה׳ 09:00–13:00</span>
+          </div>
+          <a class="btn btn-primary" href="tel:0046198030">04-6198030</a>
+        </div>
+
+        <div class="clinic-card reveal pre">
+          <div class="clinic-top">
+            <h3>מאוחדת — חיפה</h3>
+            <span class="clinic-tag alt">קופת חולים מאוחדת</span>
+          </div>
+          <div class="clinic-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><strong>מרפאה</strong>מרפאת מאוחדת, חיפה</span>
+          </div>
+          <div class="clinic-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <span><strong>שעות קבלה</strong>ב׳, ה׳ 15:00–19:00 · ו׳ 15:00–19:00</span>
+          </div>
+          <a class="btn btn-primary" href="tel:048117117">04-8117117</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad" id="reviews">
+    <div class="container">
+      <div class="review-wrap reveal pre">
+        <div class="quote-mark" aria-hidden="true">”</div>
+        <div>
+          <blockquote>טיפול מעולה, רופא סבלני וקשוב. הסברים ברורים ותחושת מקצועיות אמיתית.</blockquote>
+          <div class="review-meta">
+            <span class="rating-pill"><span class="star">★</span> 5.0 · 25 ביקורות · ClearMD</span>
+            <span class="rating-pill"><span class="star">★</span> 4.9 · 79 ביקורות · MedReviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-band" id="contact-cta">
+    <div class="container">
+      <div class="contact-head reveal pre">
+        <div>
+          <h2>מוכנים לקבוע תור?</h2>
+          <p>ניתן ליצור קשר טלפונית עם אחת המרפאות לתיאום פגישה — פרטית, דרך ביטוח משלים, או דרך מאוחדת.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="tel:0046198030">רום מדיקל · 04-6198030</a>
+          <a class="btn btn-ghost" href="tel:048117117">מאוחדת · 04-8117117</a>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-col">
+          <h4>מרפאה פרטית</h4>
+          <span>רום מדיקל, רמת ישי</span>
+          <span>חורש האלונים 18</span>
+          <a href="tel:0046198030">04-6198030</a>
+        </div>
+        <div class="contact-col">
+          <h4>מאוחדת שירותי בריאות</h4>
+          <span>מרפאת מאוחדת, חיפה</span>
+          <span>ב׳, ה׳, ו׳ 15:00–19:00</span>
+          <a href="tel:048117117">04-8117117</a>
+        </div>
+        <div class="contact-col">
+          <h4>מקום העבודה הראשי</h4>
+          <span>המכון לאלרגיה ואימונולוגיה קלינית</span>
+          <span>בית החולים רמב״ם, חיפה</span>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <div class="foot-brand">
+          <svg class="emblem" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <polygon points="22,2 40,12 40,32 22,42 4,32 4,12" fill="none" stroke="var(--accent-2)" stroke-width="1.6"/>
+            <path d="M22 15 V29 M22 15 L15 22 M22 15 L29 22" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          ד״ר ויסאם אנדראוס — אלרגיה ואימונולוגיה קלינית
+        </div>
+        <span>המידע באתר זה נועד להיכרות כללית עם השירות הרפואי, מבוסס על מידע ציבורי, ואינו מהווה ייעוץ רפואי או תחליף לפגישה קלינית.</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* header shadow + scroll progress */
+  var header = document.getElementById('siteHeader');
+  var scrollBar = document.getElementById('scrollBar');
+  var ticking = false;
+  function onScroll(){
+    if(!ticking){
+      requestAnimationFrame(function(){
+        header.classList.toggle('scrolled', window.scrollY > 8);
+        if(scrollBar){
+          var doc = document.documentElement;
+          var max = doc.scrollHeight - doc.clientHeight;
+          var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+          scrollBar.style.width = pct + '%';
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* medallion parallax tilt */
+  var medallion = document.getElementById('medallion');
+  var heroEl = document.querySelector('.hero');
+  if(medallion && heroEl && !reduceMotion){
+    heroEl.addEventListener('mousemove', function(e){
+      var rect = medallion.getBoundingClientRect();
+      var cx = rect.left + rect.width/2, cy = rect.top + rect.height/2;
+      var dx = (e.clientX - cx) / (rect.width/2);
+      var dy = (e.clientY - cy) / (rect.height/2);
+      var max = 9;
+      medallion.style.transform = 'perspective(700px) rotateX(' + (-dy*max) + 'deg) rotateY(' + (dx*max) + 'deg)';
+    });
+    heroEl.addEventListener('mouseleave', function(){
+      medallion.style.transform = '';
+    });
+  }
+
+  /* reveal-on-scroll, safe by default (elements are visible without JS) */
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.remove('pre');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.remove('pre'); });
+  }
+
+  /* ambient antibody field */
+  var canvas = document.getElementById('antibodyField');
+  if(canvas){
+    var ctx = canvas.getContext('2d');
+    var wrap = canvas.parentElement;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W, H, nodes = [];
+
+    function getColors(){
+      var cs = getComputedStyle(document.body);
+      return { a: cs.getPropertyValue('--accent-2').trim(), b: cs.getPropertyValue('--accent').trim() };
+    }
+
+    function resize(){
+      W = wrap.clientWidth; H = wrap.clientHeight;
+      canvas.width = W * dpr; canvas.height = H * dpr;
+      canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      var count = Math.round((W*H) / 26000);
+      nodes = [];
+      for(var i=0;i<count;i++){
+        nodes.push({
+          x: Math.random()*W, y: Math.random()*H,
+          vx: (Math.random()-.5)*.09, vy: (Math.random()-.5)*.09,
+          r: Math.random()*Math.PI*2, vr: (Math.random()-.5)*.0025,
+          s: 12 + Math.random()*14,
+          hue: Math.random() < .6 ? 'a' : 'b',
+          alpha: .12 + Math.random()*.22
+        });
+      }
+    }
+
+    function drawAntibody(n, colors){
+      ctx.save();
+      ctx.translate(n.x, n.y);
+      ctx.rotate(n.r);
+      ctx.strokeStyle = colors[n.hue];
+      ctx.globalAlpha = n.alpha;
+      ctx.lineWidth = 1.6;
+      ctx.lineCap = 'round';
+      var s = n.s;
+      ctx.beginPath();
+      ctx.moveTo(0, s*0.15); ctx.lineTo(0, s*0.85);
+      ctx.moveTo(0, s*0.15); ctx.lineTo(-s*0.6, -s*0.55);
+      ctx.moveTo(0, s*0.15); ctx.lineTo(s*0.6, -s*0.55);
+      ctx.stroke();
+      ctx.fillStyle = colors[n.hue];
+      [[0,s*0.15],[-s*0.6,-s*0.55],[s*0.6,-s*0.55]].forEach(function(p){
+        ctx.beginPath(); ctx.arc(p[0], p[1], 1.6, 0, Math.PI*2); ctx.fill();
+      });
+      ctx.restore();
+    }
+
+    function frame(){
+      var colors = getColors();
+      ctx.clearRect(0,0,W,H);
+      nodes.forEach(function(n){
+        n.x += n.vx; n.y += n.vy; n.r += n.vr;
+        if(n.x < -20) n.x = W+20; if(n.x > W+20) n.x = -20;
+        if(n.y < -20) n.y = H+20; if(n.y > H+20) n.y = -20;
+        drawAntibody(n, colors);
+      });
+      ctx.globalAlpha = 1;
+      if(!reduceMotion) requestAnimationFrame(frame);
+    }
+
+    resize();
+    frame();
+    var resizeTO;
+    window.addEventListener('resize', function(){
+      clearTimeout(resizeTO);
+      resizeTO = setTimeout(function(){
+        resize();
+        if(reduceMotion) frame();
+      }, 180);
+    });
+  }
+})();
+</script>
